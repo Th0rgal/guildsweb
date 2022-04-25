@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import styles from '../styles/components/GuildBox.module.css'
+import { useGuildsContract } from '../hooks/guilds';
 
-export default function GuildBox() {
+export default function GuildBox({ guild }) {
 
-    const guildContract = "0x000a7a9203bff78bfb24f0753c184a33d4cad95b1f4f510b36b00993815704";
+    const { contract } = useGuildsContract(guild);
+
+    const guildContract = guild;
     const guildName = "Titans of the Dark Circle";
     const title = "Legendary Diplomat";
     const shares = 7;

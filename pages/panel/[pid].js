@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { useGuildsContract } from '../../hooks/guilds';
 import Header from '../../components/header';
 
 export default function Panel() {
   const router = useRouter()
-  const { contract } = router.query
-
+  const { contract } = useGuildsContract(router.query);
 
   const guildContract = "0x000a7a9203bff78bfb24f0753c184a33d4cad95b1f4f510b36b00993815704";
   const guildName = "Titans of the Dark Circle";
