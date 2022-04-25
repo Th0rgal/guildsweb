@@ -38,6 +38,7 @@
     font-family: Verdana, sans-serif;
     font-size  : 18px;
     margin     : 12px;
+    overflow: hidden;
 }
 
 .info_footer {

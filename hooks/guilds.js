@@ -13,6 +13,6 @@ export function useGuildsContract(contract) {
 export function useShareCertificate() {
   return useContract({
     abi: ShareCertificate,
-    address: '0x03bca171fd12fc8a0fcbf641970e501ad33086c052bda0e58a6b747bf49c2c1d',
+    address: '0x00cd0d1b9ffd0565ff54c3d56b577707f8054e5f4e5925dab5d3f28c844c9e94',
   })
 }
