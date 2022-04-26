@@ -19,8 +19,8 @@ export default function GuildBox({ guild }) {
     const { data: extensionsData } = useStarknetCall({ contract: guildContract, method: 'get_extensions_number', args: [] });
 
     const { data: titleData } = useStarknetCall({ contract: certificateContract, method: 'get_value', args: [account, guildContractAddress, 0] });
-    const { data: certificate_id } = useStarknetCall({ contract: certificateContract, method: 'get_certificate_id', args: [account, guildContractAddress] });
-    const { data: sharesData } = useStarknetCall({ contract: certificateContract, method: 'get_shares', args: [sharesData ? sharesData.token_id : 0] });
+    const { data: certificate_id } = useStarknetCall({ contract: certificateContract, method: 'get_certificate_id', args: [account, guildContract ? guildContract.address : 0] });
+    const { data: sharesData } = useStarknetCall({ contract: certificateContract, method: 'get_shares', args: [certificate_id ? certificate_id.token_id : 0] });
     const totalShares = 100;
     const members = 47;
     const fundsValue = 0;
