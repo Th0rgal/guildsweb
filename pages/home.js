@@ -21,9 +21,9 @@ export default function Account() {
         <div className={styles.header}>
           <img className={styles.profilepicture} src="/illustrations/warrior1.webp" alt="A warrior" />
           <div className={styles.info}>
-            <h1 className={styles.title}>Hi {name}</h1>
+            <h1 className={styles.title}>Gm {name}</h1>
             <p className={styles.data_text}>
-              You are part of 7 guilds and have played for a total of <span className={styles.data_number}>{Math.floor(Math.random() * 100)}</span> hours.
+              You are part of 1 guild and have played for a total of <span className={styles.data_number}>{Math.floor(Math.random() * 100)}</span> hours.
               Morbi sed venenatis orci, in mollis libero. Sed rutrum urna libero, quis consectetur risus pretium id. Maecenas at mattis sapien, non facilisis dolor. Aenean bibendum faucibus nibh, eu scelerisque quam aliquet a.
             </p>
             <div className={styles.info_footer}>
