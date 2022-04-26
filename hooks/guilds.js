@@ -4,9 +4,10 @@ import Guilds from '../abi/Guilds.json'
 import ShareCertificate from '../abi/ShareCertificate.json'
 
 export function useGuildsContract(contract) {
+  const output = contract.toString(16);
   return useContract({
     abi: Guilds,
-    address: "0x0" + contract.toString(16),
+    address: /^0x/.test(output) ? output : "0x" + output,
   })
 }
 

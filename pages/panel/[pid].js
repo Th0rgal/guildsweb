@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useGuildsContract } from '../../hooks/guilds';
+import styles from '../../styles/Panel.module.css'
 import Header from '../../components/header';
 
 export default function Panel() {
@@ -18,7 +19,20 @@ export default function Panel() {
   return (
     <div className="background">
       <Header highlighted={"home"} />
-      <p>Guild name: {guildName}</p>
+      <h1>{guildName}</h1>
+
+      <div className={styles.main}>
+
+        <div className={styles.big_card}>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.card}>
+          </div>
+          <div className={styles.card}>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
