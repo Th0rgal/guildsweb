@@ -19,17 +19,24 @@ export default function Panel() {
   return (
     <div className="background">
       <Header highlighted={"home"} />
-      <h1>{guildName}</h1>
+
+      <h1 className={styles.title}>{guildName}</h1>
 
       <div className={styles.main}>
 
         <div className={styles.big_card}>
+          <h2 className={styles.subtitle}>Leaderboard</h2>
+
+          
         </div>
         <div className={styles.right}>
           <div className={styles.card}>
+          <h2 className={styles.subtitlebis}>Extensions</h2>
           </div>
           <div className={styles.card}>
+          <h2 className={styles.subtitlebis}>Enrolling</h2>
           </div>
+
         </div>
       </div>
 
