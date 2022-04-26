@@ -55,8 +55,6 @@ export default function Create() {
           mint === 2 ?
             <><h1 className={styles.title}>Guild Contract uploaded</h1>
 
-              <div className={styles.spacing}></div>
-
               <div className={styles.box_footer}>
 
                 <a href={"https://hackathon-2.voyager.online/tx/" + resp.current.transaction_hash} target="_blank" className={[styles.footer_element, styles.button_normal].join(" ")}>

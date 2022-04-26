@@ -1,4 +1,5 @@
 import fs from "fs";
+const { exec } = require('child_process');
 import { Provider } from 'starknet';
 import { stringToFelt } from "../../../utils/felt";
 
@@ -13,7 +14,7 @@ export default function handler(req, res) {
     gatewayUrl: 'gateway',
   })
 
-  const callData = ["0x1", "0x770E07EBD9F9661344F2EC9267E3ECD1505BC1D20DFB4B12D61CB5CA37B168C", "0x0", "0x0", account, stringToFelt(name)];
+  const callData = ["0x1", "0x770E07EBD9F9661344F2EC9267E3ECD1505BC1D20DFB4B12D61CB5CA37B168C", "0x1", "0x0", "0x1", "0x0", account, stringToFelt(name)];
   provider.deployContract({
     contract: readContract("contracts/Guilds"),
     constructorCalldata: callData
