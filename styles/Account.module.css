@@ -38,7 +38,7 @@
     font-family: Verdana, sans-serif;
     font-size  : 18px;
     margin     : 12px;
-    overflow: hidden;
+    overflow   : hidden;
 }
 
 .info_footer {
@@ -83,7 +83,7 @@
 
 .guilds {
     padding       : 0px 36px;
-    width         : min(70%, 900px);
+    width         : min(75%, 900px);
     display       : flex;
     flex-direction: column;
 }
