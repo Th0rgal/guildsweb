@@ -45,7 +45,7 @@ export default function Account() {
       </div>
 
       <div className={styles.guilds}>
-        {data ? data.guilds.map((guild) => <GuildBox guild={guild} />) : undefined}
+        {data ? data.guilds.map((guild) => <GuildBox key={guild} guild={guild} />) : undefined}
       </div>
     </div>
   )

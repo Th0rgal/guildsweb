@@ -290,6 +290,27 @@
             {
                 "name": "owner",
                 "type": "felt"
+            },
+            {
+                "name": "field",
+                "type": "felt"
+            }
+        ],
+        "name": "get_value",
+        "outputs": [
+            {
+                "name": "value",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
             }
         ],
         "name": "get_shares",
@@ -448,6 +469,22 @@
             {
                 "name": "share",
                 "type": "Uint256"
+            },
+            {
+                "name": "field_len",
+                "type": "felt"
+            },
+            {
+                "name": "field",
+                "type": "felt*"
+            },
+            {
+                "name": "values_len",
+                "type": "felt"
+            },
+            {
+                "name": "values",
+                "type": "felt*"
             }
         ],
         "name": "mint",

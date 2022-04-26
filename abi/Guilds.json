@@ -17,6 +17,18 @@
         "type": "struct"
     },
     {
+        "inputs": [],
+        "name": "get_extensions_number",
+        "outputs": [
+            {
+                "name": "nb",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "name": "whitelisted_user_address",
@@ -78,6 +90,10 @@
             {
                 "name": "share_certificate",
                 "type": "felt"
+            },
+            {
+                "name": "guild_name",
+                "type": "felt"
             }
         ],
         "name": "constructor",
@@ -85,7 +101,24 @@
         "type": "constructor"
     },
     {
-        "inputs": [],
+        "inputs": [
+            {
+                "name": "field_len",
+                "type": "felt"
+            },
+            {
+                "name": "field",
+                "type": "felt*"
+            },
+            {
+                "name": "values_len",
+                "type": "felt"
+            },
+            {
+                "name": "values",
+                "type": "felt*"
+            }
+        ],
         "name": "mint",
         "outputs": [],
         "type": "function"
@@ -184,6 +217,18 @@
             {
                 "name": "initial_share",
                 "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+            {
+                "name": "name",
+                "type": "felt"
             }
         ],
         "stateMutability": "view",
