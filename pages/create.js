@@ -4,9 +4,11 @@ import { useState, useRef } from "react";
 import ShortTextInput from "../components/input";
 import Spinner from "../components/spinner";
 import Link from 'next/link'
+import { useStarknet } from '@starknet-react/core'
 
 export default function Create() {
 
+  const { account } = useStarknet();
   const [name, setName] = useState("");
   const [mint, setMint] = useState(0);
   const resp = useRef(null);
@@ -24,7 +26,7 @@ export default function Create() {
               <div className={styles.box_footer}>
                 {name ? <button onClick={() => {
                   (async () => {
-                    const result = await (await fetch("/api/" + name, { method: 'GET' })).json();
+                    const result = await (await fetch("/api/" + account + "/" + name, { method: 'GET' })).json();
                     resp.current = result;
                     setMint(2)
                   })();
