@@ -256,6 +256,10 @@
             {
                 "name": "owner",
                 "type": "felt"
+            },
+            {
+                "name": "guild",
+                "type": "felt"
             }
         ],
         "name": "get_certificate_id",
@@ -292,6 +296,10 @@
                 "type": "felt"
             },
             {
+                "name": "guild",
+                "type": "felt"
+            },
+            {
                 "name": "field",
                 "type": "felt"
             }
@@ -309,8 +317,8 @@
     {
         "inputs": [
             {
-                "name": "owner",
-                "type": "felt"
+                "name": "token_id",
+                "type": "Uint256"
             }
         ],
         "name": "get_shares",
@@ -324,7 +332,12 @@
         "type": "function"
     },
     {
-        "inputs": [],
+        "inputs": [
+            {
+                "name": "guild",
+                "type": "felt"
+            }
+        ],
         "name": "get_total_shares",
         "outputs": [
             {
@@ -496,6 +509,10 @@
             {
                 "name": "owner",
                 "type": "felt"
+            },
+            {
+                "name": "token_id",
+                "type": "Uint256"
             }
         ],
         "name": "burn",
@@ -511,6 +528,10 @@
             {
                 "name": "amount",
                 "type": "Uint256"
+            },
+            {
+                "name": "guild",
+                "type": "felt"
             }
         ],
         "name": "increase_shares",
@@ -521,6 +542,10 @@
         "inputs": [
             {
                 "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "guild",
                 "type": "felt"
             },
             {
