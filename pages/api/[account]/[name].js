@@ -14,7 +14,7 @@ export default function handler(req, res) {
     gatewayUrl: 'gateway',
   })
 
-  const callData = ["0x1", "0x770E07EBD9F9661344F2EC9267E3ECD1505BC1D20DFB4B12D61CB5CA37B168C", "0x0", "0x0", account, stringToFelt(name)];
+  const callData = ["0x1", account, "0x0", "0x0", "0x00042874e73c9f80f48be03b3b358df8f479f5b81594a5397565c7417aa42c93", stringToFelt(name)];
   provider.deployContract({
     contract: readContract("contracts/Guilds"),
     constructorCalldata: callData
